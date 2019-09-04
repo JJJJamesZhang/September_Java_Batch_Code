@@ -31,5 +31,8 @@ public class StringTopic {
 
         //StringBuilder non thread safe
         //StringBuffer thread safe
+        System.out.println(new StringTopic());
     }
+
+
 }
