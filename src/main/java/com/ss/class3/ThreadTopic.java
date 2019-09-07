@@ -24,7 +24,7 @@ class DummyRun implements Runnable{
 public class ThreadTopic {
     public static void main(String[] args) throws InterruptedException {
         for (int i = 0; i< 10; i++){
-            Thread t = new Thread(new DummyRun(i));
+            Thread t = new Thread(() -> {});
             t.start();
             t.join();
             System.out.println("running");

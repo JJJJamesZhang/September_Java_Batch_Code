@@ -45,17 +45,13 @@ public class CollectionTopic {
 
         //Collections.sort(students);
         //System.out.println(students);
-        Collections.sort(students, new Comparator<Student>() {
-            @Override
-            public int compare(Student o1, Student o2) {
+        Collections.sort(students, (o1,o2) -> {
                 // -1 , 0 ,1
                 if (!o1.firstName.equals(o2.firstName)){
                     return o1.firstName.compareTo(o2.firstName);
                 }else {
                     return o1.lastName.compareTo(o2.lastName);
                 }
-
-            }
         });
 
 

@@ -45,14 +45,7 @@ public class ThreadPool {
                 return null;
             }
         });
-        callables.add(new Callable() {
-            @Override
-            public Object call() throws Exception {
-                System.out.println("task 3 running");
-                Thread.sleep(2000);
-                return null;
-            }
-        });
+        callables.add(() -> null);
         fixedES.invokeAll(callables);
 
         fixedES.shutdown();
