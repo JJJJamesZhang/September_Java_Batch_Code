@@ -49,6 +49,7 @@ public class Java8Topic implements Demo{
         map.put(1,"zhangsan");
         map.put(2,"lisi");
         map.put(3,"wangwu");
+        map.put(4, "zhaoliu");
 
         Set<Map.Entry<Integer,String>> entry = map.entrySet();
         Set<Integer> keySet = map.keySet();
