@@ -8,7 +8,7 @@ class Singleton{
 
     //get instance method syn keywords
     public static synchronized Singleton getInstance(){
-        if (singleton != null){
+        if (singleton == null){
             return new Singleton();
         }
         return singleton;
