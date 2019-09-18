@@ -1,12 +1,18 @@
 package com.ss.class9;
 
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
+import org.springframework.stereotype.Component;
 
-//aspect oriented programming
-
-//@Component
+//@Qualifier("student")
+@Component("student")
 public class Student implements Human{
-//    @Value("lisi")
+
+    public Student(){
+
+    }
+    @Value("lisi")
     private String name;
 
     public Student(String name) {
@@ -23,8 +29,8 @@ public class Student implements Human{
 
 
 
-    @Bean(name = "student")
-    public Student getStudent(){
-        return new Student("lisi");
-    }
+//    @Bean(name = "student")
+//    public Student getStudent(){
+//        return new Student("lisi");
+//    }
 }

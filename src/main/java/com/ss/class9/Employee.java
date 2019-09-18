@@ -1,18 +1,22 @@
 package com.ss.class9;
 
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
+import org.springframework.stereotype.Component;
 
-//@Component
+//@Qualifier("employee")
+@Component("employee")
 public class Employee implements Human {
-//    @Value("zhangsan")
+    @Value("zhangsan")
     private String name;
-//    @Value("1")
+    @Value("1")
     private int id;
 
-    @Bean(name = "employee")
-    public Employee getEmployee(){
-        return new Employee("zhangsan",1);
-    }
+//    @Bean(name = "employee")
+//    public Employee getEmployee(){
+//        return new Employee("zhangsan",1);
+//    }
 
     public String getName() {
         return name;
