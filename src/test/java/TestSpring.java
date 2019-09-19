@@ -11,6 +11,8 @@ import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.test.context.junit4.SpringRunner;
 
+import javax.annotation.Resource;
+
 @RunWith(SpringRunner.class)
 @ContextConfiguration(classes = {BeanConfig.class})
 public class TestSpring {
@@ -21,8 +23,9 @@ public class TestSpring {
 //        Assert.assertEquals(new Java8Topic().demo(),0.9 , 0.00001);
 //    }
 
-@   Qualifier("student")
-    @Autowired
+//    @Qualifier("student")
+//    @Autowired
+    @Resource(name = "employee")
     Human human;
 
     @Test
