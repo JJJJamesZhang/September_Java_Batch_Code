@@ -2,9 +2,10 @@
 <!DOCTYPE hibernate-mapping PUBLIC
         "-//Hibernate/Hibernate Mapping DTD//EN"
         "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
-<hibernate-mapping>
+<hibernate-mapping package="com.ss.class10">
     <class name="com.ss.class10.User" table="User">
-        <id name="username" column="username"/>
+        <id name="id" column="userId"/>
+        <property name="username" column="username"/>
         <property name="password" column="password"/>
     </class>
 </hibernate-mapping>
